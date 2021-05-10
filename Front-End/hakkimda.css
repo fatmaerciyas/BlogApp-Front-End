@@ -1,0 +1,810 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* loading animation  */
+
+.spinner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #131212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    z-index: 300;
+  }
+  
+  .display .spinner-container {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .circles {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    animation: displayCircles 4s;
+  }
+  
+  @keyframes displayCircles {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    25% {
+      opacity: 1;
+      visibility: visible;
+    }
+    90% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  .circles div {
+    animation: circles 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 4rem 4rem;
+  }
+  
+  .circles div::after {
+    content: "";
+    position: absolute;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: #157DCC;
+    margin: -0.4rem 0 0 -0.4rem;
+  }
+  
+  .circles div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  
+  .circles div:nth-child(1)::after {
+    top: 6.3rem;
+    left: 6.3rem;
+  }
+  
+  .circles div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  
+  .circles div:nth-child(2)::after {
+    top: 6.8rem;
+    left: 5.6rem;
+  }
+  
+  .circles div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  
+  .circles div:nth-child(3)::after {
+    top: 7.1rem;
+    left: 4.8rem;
+  }
+  
+  .circles div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  
+  .circles div:nth-child(4)::after {
+    top: 7.2rem;
+    left: 4rem;
+  }
+  
+  .circles div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  
+  .circles div:nth-child(5)::after {
+    top: 7.1rem;
+    left: 3.2rem;
+  }
+  
+  .circles div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  
+  .circles div:nth-child(6)::after {
+    top: 6.8rem;
+    left: 2.4rem;
+  }
+  
+  .circles div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  
+  .circles div:nth-child(7)::after {
+    top: 6.3rem;
+    left: 1.7rem;
+  }
+  
+  .circles div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  
+  .circles div:nth-child(8)::after {
+    top: 5.6rem;
+    left: 1.2rem;
+  }
+  
+  @keyframes circles {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* End of loading animation */
+
+/* menu - navbar */
+.container {
+    display: none;
+}
+
+.display .container {
+    display: block;
+}
+
+.hamburger-menu {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: right 0.7s;
+}
+
+.change .hamburger-menu {
+    right: 33rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.change .line {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.change .line-1 {
+    transform: rotate(45deg) translate(0.3rem, 0.8rem);
+}
+
+.change .line-2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .line-3 {
+    transform: rotate(-45deg) translate(0.3rem, -0.8rem);
+}
+
+.hamburger-menu span {
+    position: absolute;
+    left: 5rem;
+    width: 10rem;
+    height: 4rem;
+    background-color: #3270EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.change .hamburger-menu:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hamburger-menu span::before {
+    content: "";
+    position: absolute;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid #3270EB;
+    border-bottom: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+    top: 50%;
+    left: -2rem;
+    transform: translateY(-50%);
+}
+
+.dropdown-menu .dropdown {
+    text-align: right !important;
+}
+
+.dropdown-menu .dropdown .menu-link {
+    font-size: 1.8rem;
+}
+
+
+.dropdown-link i {
+    font-size: 1.8rem;
+}
+
+.dropdown-menu i {
+    font-size: 2rem;
+    color: #179AE6;
+    margin-left: 1rem;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    perspective: 100rem;
+    overflow: hidden;
+}
+
+
+.sidebar {
+    width: 40rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    background-color: #fff;
+    transition: right 0.5s;
+    z-index: 100;
+    opacity: 0.9;
+}
+
+.change .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center; 
+}
+
+.menu-link {
+    font-family: "Baloo Da 2", serif;
+    font-size: 2.5rem;
+    color: #555;
+    position: relative;
+}
+
+.menu-link::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #001EB3;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-link:hover::before {
+    width: 100%;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i {
+    font-size: 2rem;
+    margin: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #777;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+    background-color: #157DCC;
+}
+/* End of menu-navbar */
+
+
+/* background img */
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.999);
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    animation: scale 25s infinite;
+}
+
+@keyframes scale {
+    0% {
+    transform: scale(1.3);
+    }
+    50% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(1.3);
+    }
+}
+
+/*img profil photo */
+.img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem 20rem 5rem;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    transition: all 1s;
+}
+  
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+    width: 100%;
+}
+
+.card {
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 0.5rem;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: 0.5;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-info h2 {
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.7rem;
+    line-height: 1.3rem;
+    font-weight: 300;
+    color: #eee;
+    margin-bottom: 4rem;
+}
+
+.card-info p {
+    font-family: "Baloo da 2", serif;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+    color: #eee;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+/* End of img sekillendirme */
+
+
+.about-us {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    transition: all 1s;
+}
+  
+.about-us h1 {
+    font-family: "Baloo Da 2", serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: #fff;
+    width: 50%;
+    line-height: 9rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+}
+  
+.about-us p {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #fff;
+    width: 80%;
+    line-height: 2.2rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+}
+ 
+  
+@keyframes moveBanner {
+    0% {
+      transform: translateY(40rem) rotateY(-20deg);
+    }
+    100% {
+      transform: translateY(0) rotateY(0);
+      opacity: 1;
+    }
+}
+
+.change .img {
+    top: 10%;
+    left: 3%;
+}
+
+.change .about-us {
+    top: 15%;
+    left: 25%;
+    width: 50%;
+}
+
+/* Section 2 */
+.section-2 {
+    width: 100%;
+    height: 100%;
+    padding: 15rem 0 10rem 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.progress-bars-wrapper {
+    margin-bottom: 10rem;
+}
+  
+.progress-bar {
+    width: 60rem;
+    height: 3rem;
+    background-color: #ccc;
+    margin: 1.5rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 1rem #555;
+    position: relative;
+}
+  
+.progress-text {
+    font-family: "Baloo Da 2", serif;
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+  
+.progress-text span {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+  
+.progress-percent {
+    width: 0;
+    height: 100%;
+    background-color: #0e67b9;
+    border-radius: 0.3rem;
+    transition: all 2s ease-in-out;
+}
+
+.section-2:hover .box-1{
+    width: 97%;
+}
+
+.section-2:hover .box-2{
+    width: 89%;
+}
+
+.section-2:hover .box-3{
+    width: 70%;
+}
+
+.section-2:hover .box-4{
+    width: 82%;
+}
+
+.section-2:hover .box-5{
+    width: 65%;
+}
+
+.section-2:hover .box-6{
+    width: 55%;
+}
+
+.section-2:hover .box-7{
+    width: 50%;
+}
+  
+.services {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+.service {
+    text-align: center;
+}
+  
+.service:first-child,
+.service:last-child {
+    align-self: flex-start;
+}
+  
+.service i {
+    font-size: 10rem;
+    color: #888;
+    margin-bottom: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.5rem #555;
+}
+  
+.service h2 {
+    font-family: "Baloo Da 2", serif;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #777;
+    width: 25rem;
+    letter-spacing: 0.3rem;
+    transform: skew(-10deg);
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+/* End of Section 2 */
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 15rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.footer-content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.copyright {
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.6rem;
+    color: #a7a7a7;
+}
+  
+.social-list a {
+    margin: 0 2rem;
+}
+  
+.social-list i {
+    font-size: 2rem;
+    color: #a7a7a7;
+}
+  
+.scroll-btn {
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #e2b646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+}
+
+/* End of footer */
+  
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .services {
+      height: auto;
+      flex-wrap: wrap;
+    }
+  
+    .service {
+      margin: 3rem 2rem;
+    }
+    
+  
+}
+
+  
+@media (max-width: 1000px) {
+    html {
+        font-size: 58%;
+    }
+
+    .img {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .about-us {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+    }
+
+    .copyright {
+        order: 1;
+        margin-top: 3rem;
+    }
+}
+  
+@media (max-width: 800px) {
+    .progress-bar {
+      width: 50rem;
+    }
+
+    .about-us {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 100%;
+    }
+
+    .about-us h1 {
+        font-size: 3rem;
+    }
+
+    .about-us p {
+        font-size: 1.3rem;
+        
+    }
+}
+  
+@media (max-width: 600px) {
+  
+    .section-2 {
+      padding: 10rem;
+    }
+  
+    .section-2-heading {
+      margin-bottom: 10rem;
+    }
+  
+    .progress-bar {
+      width: 45rem;
+    }
+  
+    .project-img {
+      width: 100%;
+    }
+  
+}
+  
+@media (max-width: 500px) {
+    html {
+      font-size: 55%;
+    }
+
+    .hide h1 {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+  .hide p {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+}
+  
+@media (max-width: 450px) {
+    html {
+      font-size: 45%;
+    }
+  
+  
+    .section-2-heading {
+      text-align: center;
+    }
+  
+    .progress-bar {
+      width: 40rem;
+    }
+
+   
+    .change .sidebar {
+        width: 100%;
+        height: 100vh;
+    }
+    
+}
+  /* End of Responsive */
+  

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="hakkimda.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Hakkımda</title>
+
+  <script>
+    $(document).ready(function () {
+      $(".dropdown-link").click(function () {
+        $(".dropdown-menu").slideToggle();
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- loading animation -->
+  <div class="spinner-container">
+    <div class="circles">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- End of loading animation -->
+
+  <div class="container">
+    <!-- hamburger menu -->
+    <div class="hamburger-menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+      <span>Kapat</span>
+    </div>
+    <!-- End of hamburger menu -->
+
+    <!-- header -->
+    <header class="header">
+      <div class="img-wrapper">
+        <img src="images/bg2.jpg" />
+        <div class="img">
+          <div class="cards-wrapper">
+            <div class="card" data-tilt>
+              <div class="card-img-wrapper">
+                <img src="images/pp.jpg" alt="CEO" />
+              </div>
+              <div class="card-info">
+                <h2>Fatma Erciyas</h2>
+                <p>
+                  Web Developer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-us">
+        <h1>Hakkımda</h1>
+        <p>Merhaba. Ben Fatma Erciyas.<i class="far fa-grin-alt"></i>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem odit, 
+          tenetur et sint nobis odio. Dicta illo ut velit ratione expedita veritatis voluptatum hic mollitia, 
+          saepe fugit facilis delectus...<i class="far fa-grin-beam"></i> Bilgiler bilgiler...<i class="fas fa-smile-beam"></i>
+        </p>
+      </div>
+    </header>
+    <!-- End of header -->
+
+    <!-- menu -->
+    <section class="sidebar">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="anasayfa.html" class="menu-link" data-content="Anasayfa">Anasayfa</a>
+        </li>
+        <li class="menu-item dropdown-link ">
+          <a href="#" class="menu-link " data-content="Blog">Blog</a> <i class="fas fa-caret-down"></i>
+          <ul class="dropdown-menu">
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link" data-content="Yazılım/Teknoloji">Yazılım/Teknoloji</a><i
+                class="fas fa-laptop-code"></i>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link" data-content="Film">Film</a><i class="fas fa-video"></i>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link" data-content="Kitap">Kitap</a><i class="fas fa-book-open"></i>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link" data-content="Yaşam">Yaşam</a><i class="far fa-grin-beam"></i>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="hakkimda.html" class="menu-link " data-content="Hakkımda">Hakkımda</a>
+        </li>
+        <li class="menu-item">
+          <a href="iletisim.html" class="menu-link " data-content="İletişim">İletişim</a>
+        </li>
+
+      </ul>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+    <!-- End of menu -->
+
+    <!-- Section 2 -->
+    <section class="section-2" id="section-2">
+      <div class="progress-bars-wrapper">
+        <div class="progress-bar">
+          <p class="progress-text">
+            HTML
+            <span></span>%97
+          </p>
+          <div class="progress-percent box-1"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">
+            CSS
+            <span></span>%89
+          </p>
+          <div class="progress-percent box-2"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">
+            JavaScript
+            <span></span>%70
+          </p>
+          <div class="progress-percent box-3"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">
+            Bootstrap
+            <span></span>%82
+          </p>
+          <div class="progress-percent box-4"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">
+            C#
+            <span></span>%65
+          </p>
+          <div class="progress-percent box-5"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">
+            MsSQL
+            <span></span>%55
+          </p>
+          <div class="progress-percent box-6"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">
+            Asp .Net Core
+            <span></span>%50
+          </p>
+          <div class="progress-percent box-7"></div>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <i class="far fa-lightbulb"></i>
+          <h2 class="service-heading">Yaratıcılık</h2>
+        </div>
+        <div class="service">
+          <i class="fas fa-cut"></i>
+          <h2 class="service-heading">Problem Çözme</h2>
+        </div>
+        <div class="service">
+          <i class="fas fa-tachometer-alt"></i>
+          <h2 class="service-heading">Hız</h2>
+        </div>
+        <div class="service">
+          <i class="fas fa-rocket"></i>
+          <h2 class="service-heading">Dinamik Siteler</h2>
+        </div>
+      </div>
+    </section>
+    <!-- End of Section 2 -->
+
+  </div>
+
+<!-- footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="copyright">
+        Copyright &copy; 2021, FatmaErciyas - All Rights Reserved
+      </p>
+      <div class="social-list">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+<!-- End of footer -->
+
+  <script src="hakkimda.js"></script>
+  <script src="tilt.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

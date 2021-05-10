@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anasayfa</title>
+  <link rel="stylesheet" href="anasayfa.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".dropdown-link").click(function () {
+        $(".dropdown-menu").slideToggle();
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <!--loading animation-->
+  <div class="spinner-container">
+    <div class="circles">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!--End of loading animation-->
+
+
+  <!--container-->
+  <div class="container">
+
+    <!--hamburger menu-->
+    <div class="hamburger-menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+      <span>Close</span>
+    </div>
+    <!--End of hamburger menu-->
+
+    <!--header-->
+    <header class="header">
+      <div class="img-wrapper">
+        <img src="images/bg4.jpg" />
+      </div>
+      <div class="banner">
+        <h1>Fatma Erciyas</h1>
+        <p>Web Developer</p>
+      </div>
+    </header>
+    <!-- End of header -->
+
+
+    <!--menu-->
+    <section class="sidebar">
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="anasayfa.html" class="menu-link" data-content="Anasayfa">Anasayfa</a>
+        </li>
+        <li class="menu-item dropdown-link ">
+          <a href="#" class="menu-link " data-content="Blog">Blog</a> <i class="fas fa-caret-down"></i>
+          <ul class="dropdown-menu">
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link" data-content="Yazılım/Teknoloji">Yazılım/Teknoloji</a><i
+                class="fas fa-laptop-code"></i>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link" data-content="Film">Film</a><i class="fas fa-video"></i>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link " data-content="Kitap">Kitap</a><i class="fas fa-book-open"></i>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-link " data-content="Yaşam">Yaşam</a><i class="far fa-grin-beam"></i>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="hakkimda.html" class="menu-link " data-content="Hakkımda">Hakkımda</a>
+        </li>
+        <li class="menu-item">
+          <a href="iletisim.html" class="menu-link " data-content="İletişim">İletişim</a>
+        </li>
+
+      </ul>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+    <!--End of menu-->
+
+    <!--Introduce-->
+    <section class="introduce">
+      <div class="section-header">
+        <h1 class="section-heading">Ben Kimim?</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="hi">
+        <p>Merhaba ben Fatma 
+        </p><br>
+        <p>
+          Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Web Tasarım ve Web Programlama ile ilgileniyorum.
+          Web Programlama tarafında Asp.Net ile çalışmayı seviyorum.
+          Henüz bu işte çok yeniyim. Ama hedefime adım adım yaklaştığımı hissediyorum.
+          Hedefim ileride başarılı bir Full-Stack-Developer olabilmek. Umarım başarabilirim ve buna birlikte şahitlik ederiz.<i class="far fa-grin-beam"></i>
+        </p>
+      </div>
+    </section>
+    <!--End of Introduce-->
+
+
+    <!-- Section 3 -->
+    <section class="section-3">
+      <h1 class="section-heading">Blog Kategorileri</h1>
+      <div class="gallery">
+        <a href="#" class="gallery-link" title="Software">
+          <img src="images/software.jpg" class="card-img" />
+          <h3 class="card-name">Yazılım/Teknoloji</h3>
+          <p class="card-description">
+            Web tasarımı, web programlama farklı programlama dilleri ve okulda yazılımla ilgili öğrendiklerimi 
+            yazdığım bir bölüm.
+          </p>
+        </a>
+        <a href="#" class="gallery-link" title="tv">
+          <img src="images/tv.jpg" class="card-img" />
+          <h3 class="card-name">Film</h3>
+          <p class="card-description">
+            Her hafta 1 film incelemesi yapıyoruz. Her hafta izlediğim bir film  hakkında eleştirilerimi ve 
+            düşüncelerimi yazacağım blog bölümü.
+          </p>
+        </a>
+        <a href="#" class="gallery-link" title="book">
+          <img src="images/book.jpg" class="card-img" />
+          <h3 class="card-name">Kitap</h3>
+          <p class="card-description">
+            Her hafta 1 kitap incelemesi yapıyoruz. Her hafta okuduğum bir kitap hakkında eleştirilerimi ve
+             düşüncelerimi yazacağım blog bölümü. 
+          </p>
+        </a>
+        <a href="#" class="gallery-link" title="life">
+          <img src="images/life.jpg" class="card-img" />
+          <h3 class="card-name">Yaşam</h3>
+          <p class="card-description">
+            Bu bölümde hayatımda karşılaştığım zorlukları, mücadele etme şeklimi göreceksiniz. Örneğin
+            ilk staj, ilk iş günü, iş yerinde yaşadıklarım, yazılım hayatımın neresinde vb.
+          </p>
+        </a>
+      </div>
+    </section>
+    <!-- End of Section 3 -->
+
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="copyright">
+          Copyright &copy; 2021, FatmaErciyas - All Rights Reserved
+        </p>
+        <div class="social-list">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!--End of footer-->
+
+
+    <!--scroll buton-->
+    <a href="#" class="scroll-btn">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!--End of scroll buton-->
+
+  </div> 
+  <!-- End of container-->
+
+  <script src="anasayfa.js"></script>
+  
+</body>
+
+</html>

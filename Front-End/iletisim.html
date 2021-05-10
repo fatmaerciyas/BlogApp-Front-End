@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iletisim.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet" />
+    <title>İletişim</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".dropdown-link").click(function () {
+                $(".dropdown-menu").slideToggle();
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <!-- loading animation -->
+    <div class="spinner-container">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- End of loading animation -->
+
+    <div class="container">
+        <!-- hamburger menu -->
+        <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+            <span>Kapat</span>
+        </div>
+        <!-- End of hamburger menu -->
+
+     
+        <!-- menu -->
+        <section class="sidebar">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="anasayfa.html" class="menu-link" data-content="Anasayfa">Anasayfa</a>
+                </li>
+                <li class="menu-item dropdown-link ">
+                    <a href="#" class="menu-link " data-content="Blog">Blog</a> <i class="fas fa-caret-down"></i>
+                    <ul class="dropdown-menu">
+                        <li class="menu-item dropdown">
+                            <a href="#" class="menu-link" data-content="Yazılım/Teknoloji">Yazılım/Teknoloji</a><i
+                                class="fas fa-laptop-code"></i>
+                        </li>
+                        <li class="menu-item dropdown">
+                            <a href="#" class="menu-link" data-content="Film">Film</a><i class="fas fa-video"></i>
+                        </li>
+                        <li class="menu-item dropdown">
+                            <a href="#" class="menu-link" data-content="Kitap">Kitap</a><i class="fas fa-book-open"></i>
+                        </li>
+                        <li class="menu-item dropdown">
+                            <a href="#" class="menu-link" data-content="Yaşam">Yaşam</a><i class="far fa-grin-beam"></i>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="hakkimda.html" class="menu-link " data-content="Hakkımda">Hakkımda</a>
+                </li>
+                <li class="menu-item">
+                    <a href="iletisim.html" class="menu-link " data-content="İletişim">İletişim</a>
+                </li>
+
+            </ul>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+        <!-- End of menu -->
+           
+     <!-- Section 1 -->
+     <section class="section-1" id="section-1">
+        <h1 class="section-heading section-1-heading">İletişim</h1>
+        <form class="contact-form center" action="https://formsubmit.co/fatmaeciyas@gmail.com" method="POST">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit" value="Submit" class="contact-form-btn">Gönder</button>
+       </form>
+      </section>
+      <!-- End of Section 1 -->
+
+    </div>
+
+<!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+        <p class="copyright">
+            Copyright &copy; 2021, FatmaErciyas - All Rights Reserved
+        </p>
+        <div class="social-list">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        </div>
+    </footer>
+<!-- End of footer -->
+
+<script src="iletisim.js"></script>
+</body>
+
+</html>
